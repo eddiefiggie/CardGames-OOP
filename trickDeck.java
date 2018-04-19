@@ -1,6 +1,6 @@
 /*****************************************************************
  * Name: Edwin Figueroa
- * Date: 4/13/18
+ * Date: 4/19/18
  *
  * Description: Creates a trickDeck object from the DeckInterface
  *****************************************************************/
@@ -152,6 +152,11 @@ public class trickDeck implements DeckInterface {
             }
         }
         System.out.println();
+    }
+
+    @Override
+    public void getFirstCard() {
+        // part11 code goes here
     }
 }
 

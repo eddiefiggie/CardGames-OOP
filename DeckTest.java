@@ -1,6 +1,6 @@
 /*****************************************************************
  * Name: Edwin Figueroa
- * Date: 4/13/18
+ * Date: 4/19/18
  *
  * Description: Deck app
  *****************************************************************/
@@ -60,6 +60,23 @@ public class DeckTest {
                     break;
                 case 4:
                     System.out.println();
+                    System.out.println ( "Dealing 1 Card ... " );
+                    System.out.println(); 
+                    if(deckSwitcher == 0) {
+                        deckOfCards.deal(5);
+                        deckOfCards.getFirstCard();
+                    }
+                    else if(deckSwitcher == 1) {
+                        stripperDeck.getFirstCard();
+                        stripperDeck.displayDeal();
+                    }
+                    else {
+                        markedDeck.deal(5);
+                        markedDeck.getFirstCard();
+                    }    
+                    break;
+                case 5:
+                    System.out.println();
                     System.out.println ( "Dealing 5 Cards ... " );
                     System.out.println(); 
                     if(deckSwitcher == 0) {
@@ -93,13 +110,14 @@ public class DeckTest {
         System.out.println( "1. Shuffle" );
         System.out.println( "2. Display" );
         System.out.println( "3. Cycle Decks" );
-        System.out.println( "4. Deal 5 Cards" );
-        System.out.println( "5. Exit" );
+        System.out.println( "4. Deal 1 Card" );
+        System.out.println( "5. Deal 5 Cards" );
+        System.out.println( "6. Exit" );
         System.out.println();
         System.out.print( "Choice: " );
         // vallidation for options added here.
         value = selectValue();
-        while(value < 1 || value > 5) {
+        while(value < 1 || value > 6) {
             System.out.print("Invalid entry, try again: ");
             value = selectValue();
         }        
