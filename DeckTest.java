@@ -19,7 +19,7 @@ public class DeckTest {
         int deckSwitcher = 0;
       
         int choice = getMenuChoice();
-        while ( choice != 5 ) {
+        while ( choice != 6 ) {
             switch ( choice ) {
                 case 1:
                     System.out.println();
@@ -63,15 +63,12 @@ public class DeckTest {
                     System.out.println ( "Dealing 1 Card ... " );
                     System.out.println(); 
                     if(deckSwitcher == 0) {
-                        deckOfCards.deal(5);
                         deckOfCards.getFirstCard();
                     }
                     else if(deckSwitcher == 1) {
                         stripperDeck.getFirstCard();
-                        stripperDeck.displayDeal();
                     }
                     else {
-                        markedDeck.deal(5);
                         markedDeck.getFirstCard();
                     }    
                     break;
