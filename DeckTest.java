@@ -64,12 +64,15 @@ public class DeckTest {
                     System.out.println(); 
                     if(deckSwitcher == 0) {
                         deckOfCards.getFirstCard();
+                        //deckOfCards.displayDeal();
                     }
                     else if(deckSwitcher == 1) {
                         stripperDeck.getFirstCard();
+                        //stripperDeck.displayDeal();
                     }
                     else {
                         markedDeck.getFirstCard();
+                        //markedDeck.displayDeal();
                     }    
                     break;
                 case 5:
