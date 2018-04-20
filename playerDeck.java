@@ -155,29 +155,21 @@ public class playerDeck implements DeckInterface {
     }
 
     @Override
-    public void getFirstCard() {
-        try {
-            int count = 0;
-            int openSlot = 0;
-            int cardCount = 1;           
-            // int cardCount = 1;
-            boolean found = false;
-            while(dealHand[openSlot] != null) {
-                openSlot++;
-            }
-            while(deck[count] == null) {
-                count++;
-            }
-            dealHand[openSlot] = deck[count];
-            deck[count] = null;
-            String theCard = dealHand[count].getValue() + dealHand[count].getSuit();
-            System.out.printf("Card drawn for the top: " + theCard);          
+    public void getFirstCard() throws ArrayIndexOutOfBoundsException {
+        int count = 0;
+        int openSlot = 0;
+        int cardCount = 1;           
+        boolean found = false;
+        while(dealHand[openSlot] != null) {
+            openSlot++;
         }
-        catch(ArrayIndexOutOfBoundsException e) {
-            System.out.println("*** All of the cards have been dealt. ***");
-            // System.out.println(e);
+        while(deck[count] == null) {
+            count++;
         }
-
+        dealHand[openSlot] = deck[count];
+        deck[count] = null;
+        String theCard = dealHand[count].getValue() + dealHand[count].getSuit();
+        System.out.printf("Card drawn for the top: " + theCard);          
     }
 }
 

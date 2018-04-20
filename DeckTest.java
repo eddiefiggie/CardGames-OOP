@@ -62,19 +62,27 @@ public class DeckTest {
                     System.out.println();
                     System.out.println ( "Dealing 1 Card ... " );
                     System.out.println(); 
-                    if(deckSwitcher == 0) {
-                        deckOfCards.getFirstCard();
-                        //deckOfCards.displayDeal();
+                    
+                    try {
+                        if(deckSwitcher == 0) {
+                            deckOfCards.getFirstCard();
+                            //deckOfCards.displayDeal();
+                        }
+                        else if(deckSwitcher == 1) {
+                            stripperDeck.getFirstCard();
+                            //stripperDeck.displayDeal();
+                        }
+                        else {
+                            markedDeck.getFirstCard();
+                            //markedDeck.displayDeal();
+                        }    
+                        break;
                     }
-                    else if(deckSwitcher == 1) {
-                        stripperDeck.getFirstCard();
-                        //stripperDeck.displayDeal();
+                    catch(ArrayIndexOutOfBoundsException e) {
+                        System.out.println("*** All of the cards have been dealt. ***");
+                        // System.out.println(e);
+                        break;
                     }
-                    else {
-                        markedDeck.getFirstCard();
-                        //markedDeck.displayDeal();
-                    }    
-                    break;
                 case 5:
                     System.out.println();
                     System.out.println ( "Dealing 5 Cards ... " );
